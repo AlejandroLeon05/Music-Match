@@ -130,7 +130,10 @@
                 alert("La contraseña debe tener al menos 6 caracteres.");
                 return false;
             }
-            return true;
+               // Si las validaciones pasan, redirigir a profileuser.html
+               window.location.href = "profile_user.html";
+               return false;  // Evita que el formulario haga su comportamiento por defecto
+               //return true;
         }
 
         function validateRegisterForm() {
