@@ -7,7 +7,7 @@
 // Use this file to add JavaScript to your project
 
 document.addEventListener('DOMContentLoaded', () => {
-    
+    // Cargar el carrito desde localStorage
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
     function renderCart() {
