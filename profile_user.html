@@ -40,6 +40,10 @@
             .social-icons a:hover {
                 color: #007bff;
             }
+            .action-buttons a {
+                margin: 10px;
+                font-size: 18px;
+            }
         </style>
     </head>
     <body>
@@ -54,15 +58,7 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">Contactanos</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Contratar</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="catalog_all.html">Todos los musicos</a></li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="catalog_popular.html">Populares</a></li>
-                                <li><a class="dropdown-item" href="catalog_new.html">Nuevos</a></li>
-                            </ul>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="catalog_all.html">Musicos</a></li>
                     </ul>
 
                     <!-- Barra de búsqueda simple -->
@@ -76,8 +72,15 @@
                         <i class="bi-cart-fill me-1"></i>
                         Carrito
                         <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                      </a>
+                    </a>
 
+                       <!-- Icono de inicio de sesión -->
+                       <div class="d-flex ms-auto">
+                        <a href="index.html" class="btn btn-outline-dark">
+                            <i class="bi bi-person-circle me-1"></i>
+                            Cerrar Sesión
+                        </a>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -108,6 +111,12 @@
                 <p class="mt-4">Soy un apasionado desarrollador web con más de 5 años de experiencia creando sitios web y aplicaciones móviles. Me encanta aprender nuevas tecnologías y compartir mi conocimiento con otros. En mi tiempo libre, disfruto tocando la guitarra y explorando nuevos géneros musicales.</p>
             </div>
 
+            <!-- Botones de navegación -->
+            <div class="action-buttons">
+                <a href="musician_form.html" class="btn btn-secondary">Informacion Músical</a>
+                <a href="purchase_history.html" class="btn btn-info">Historial de Compras</a>
+            </div>
+
             <!-- Redes sociales -->
             <div class="social-icons my-4">
                 <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
@@ -121,6 +130,3 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
-
-
-    

@@ -90,15 +90,7 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">Contáctanos</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Contratar</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="catalog_all.html">Todos los músicos</a></li>
-                            <li><hr class="dropdown-divider" /></li>
-                            <li><a class="dropdown-item" href="catalog_popular.html">Populares</a></li>
-                            <li><a class="dropdown-item" href="catalog_new.html">Nuevos</a></li>
-                        </ul>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="catalog_all.html">Musicos</a></li>
                 </ul>
 
                 <form class="d-flex me-3" action="search.html" method="GET">
@@ -142,6 +134,9 @@
         <div class="total">
             Total a pagar: $<span id="cart-total">0.00</span>
         </div>
+
+        <!-- Botón de pago -->
+        <button id="checkout-button" class="btn btn-primary mt-3">Pagar ahora</button>
         
         <script>
             document.addEventListener('DOMContentLoaded', () => {
@@ -187,6 +182,10 @@
                 }
 
                 renderCart();
+                // Redirigir al proceso de pago cuando se haga clic en el botón
+                document.getElementById('checkout-button').addEventListener('click', () => {
+                    window.location.href = 'checkout.html';  // Aquí redirige a la página de pago, donde se integrara Stripe o cualquier otro sistema de pago.
+                });
             });
         </script>
     </main>
