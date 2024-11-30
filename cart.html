@@ -34,7 +34,7 @@
 
         h1 {
             margin-bottom: 20px;
-            color: #343a40; 
+            color: #ffffff; 
         }
 
         table {
@@ -60,7 +60,7 @@
             font-size: 1.5rem;
             font-weight: bold;
             margin-top: 20px;
-            color: #343a40; 
+            color: #ffffff; 
         }
 
         footer {
@@ -84,21 +84,13 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="#!">Music-Match</a>
+            <a class="navbar-brand" href="index.html">Music-Match</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">Contáctanos</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Contratar</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="catalog_all.html">Todos los músicos</a></li>
-                            <li><hr class="dropdown-divider" /></li>
-                            <li><a class="dropdown-item" href="catalog_popular.html">Populares</a></li>
-                            <li><a class="dropdown-item" href="catalog_new.html">Nuevos</a></li>
-                        </ul>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="catalog_all.html">Musicos</a></li>
                 </ul>
 
                 <form class="d-flex me-3" action="search.html" method="GET">
@@ -122,8 +114,16 @@
         </div>
     </nav>
 
+    <header class="bg-dark py-5">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="text-center text-white">
+                <h1 class="display-4 fw-bolder">Carrito de Compras</h1>
+            </div>
+        </div>
+    </header>
+
     <main>
-        <h1>Carrito de Compras</h1>
+        
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -142,6 +142,9 @@
         <div class="total">
             Total a pagar: $<span id="cart-total">0.00</span>
         </div>
+
+        <!-- Botón de pago -->
+        <button id="checkout-button" class="btn btn-primary mt-3">Pagar ahora</button>
         
         <script>
             document.addEventListener('DOMContentLoaded', () => {
@@ -187,6 +190,10 @@
                 }
 
                 renderCart();
+                // Redirigir al proceso de pago cuando se haga clic en el botón
+                document.getElementById('checkout-button').addEventListener('click', () => {
+                    window.location.href = 'checkout.html';  // Aquí redirige a la página de pago, donde se integrara Stripe o cualquier otro sistema de pago.
+                });
             });
         </script>
     </main>
@@ -194,6 +201,10 @@
     <footer class="py-5 bg-dark">
         <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Music-Match 2024</p></div>
     </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-4f0VHp54VtI70Wyyk1J+ypI0/1DvoOXLWg/zBzFVVW4s/VOW4hj4ya40P6KN7cZ+" crossorigin="anonymous"></script>
