@@ -153,8 +153,11 @@
         </div>
 
         <!-- Botón de pago -->
-        <button id="checkout-button" class="btn btn-primary mt-3">Pagar ahora</button>
-        
+        <button class="btn btn-primary mt-3">
+            <a href="https://buy.stripe.com/test_eVa7wz2QScW2bu09AA" target="_blank" class="link">
+                Contratar Musico
+                </a>
+            </button>
         <script>
             document.addEventListener('DOMContentLoaded', () => {
                 const cart = JSON.parse(localStorage.getItem('cart')) || [];
