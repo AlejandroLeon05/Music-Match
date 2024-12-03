@@ -78,6 +78,11 @@
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
 }
+.link {
+  text-decoration: none; /* Elimina el subrayado */
+  color: inherit; /* Usa el color del botón */
+  display: inline-block; /* Uniformidad visual */
+}
 
 *,
 *::before,
